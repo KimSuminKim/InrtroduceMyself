@@ -415,9 +415,13 @@
                 margin-top: 5%;
             }
 
-            .project-detail:nth-child(2),
-            .project-detail:nth-child(4) {
+            .project-detail:nth-child(2n) {
                 padding: 0 2%;
+            }
+
+            .project-detail:nth-child(6),
+            .project-detail:nth-child(8) {
+                padding: 0;
             }
 
             .twoList {
@@ -469,7 +473,12 @@
             }
 
             .project-title {
+                font-size: 1.8rem;
                 margin-top: 8%;
+            }
+
+            #content {
+                font-size: 1.8rem;
             }
 
             #kor {
@@ -479,6 +488,15 @@
             #one {
                 line-height: 1.5rem;
             }
+
+            .gap {
+                margin-left: 2%;
+            }
+
+            #blurr {
+                font-size: 0.8rem !important;
+            }
+
         }
     </style>
 </head>
@@ -500,12 +518,12 @@
             <br />
             kimtnals819@gmail.com<br />공부 :<img src="notion_nomemtion.png" id="notion"
                 onclick="window.open('https://www.notion.so/3fea7c407e6a479c8c239550e65b94ad?v=85d9a41b57f64d72b8640a2d7132f168&pvs=4','공부기록','width=900px')" />
-            <ul>
+            <ul id="blurr">
                 <li>EXPERIENCE</li>
                 <li>
                     2016.03
                     <div class="gap">대진대학교
-                        입학<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[식품영양학과
+                        입학<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[식품영양학과
                         전공]</div>
                 </li>
                 <li>
@@ -544,7 +562,7 @@
         <div id="project">
             <div class="project-title">1. 샐러드 판매 사이트</div>
             <div>
-                <img src="dndn_logo.png" class="project-image"
+                <img src="dndn_mainWithTouch.png" class="project-image"
                     onclick="window.open('./dndn_P.html','든든','width=900px')" />
             </div>
             <div class="project-detail">
@@ -609,7 +627,7 @@
 
             <div class="project-title">2. 다목적 커뮤니티 사이트</div>
             <div>
-                <img src="buildingwood_main2.png" class="project-image"
+                <img src="bw_mainWithTouch.png" class="project-image"
                     onclick="window.open('./buildingwood_P.html','빌딩숲','width=900px')" />
             </div>
             <div class="project-detail">
@@ -663,7 +681,7 @@
             </div>
             <div class="project-title">3. 교육센터 운영 프로그램</div>
             <div>
-                <img src="sql_main.png" class="project-image"
+                <img src="sql_mainWithTouch.png" class="project-image"
                     onclick="window.open('./sql_P.html','SQL','width=900px')" />
             </div>
             <div class="project-detail">
@@ -677,7 +695,7 @@
                     <li>교육센터에서의 업무를 효율적으로 처리,관리할 수 있게 하여 운영에 편리함을 증대시킨다</li>
                 </ul>
                 <ul>
-                    <li style="margin-bottom: 2%;">기술 스택</li>
+                    <li style="margin-bottom: 2%; margin-right: 65%;" class="middleTitle">기술 스택</li>
                     <li class="leftGap">개발 환경</li>
                     <li class="light leftGap">Java (JDK11)</li>
                     <li class="light leftGap">Oracle SQL</li>
@@ -697,7 +715,7 @@
 
             <div class="project-title">4. 가상 주식 매매 프로그램</div>
             <div>
-                <img src="console_main.jpg" class="project-image"
+                <img src="console_mainWithTouch.jpg" class="project-image"
                     onclick="window.open('./console_P.html','Console','width=900px')" />
             </div>
             <div class="project-detail">
@@ -714,7 +732,7 @@
             </div>
             <div class="project-detail">
                 <ul>
-                    <li style="margin-bottom: 2%;">기술 스택</li>
+                    <li style="margin-bottom: 2%; margin-right: 40%;" class="middleTitle">기술 스택</li>
                     <li class="leftGap">개발 환경</li>
                     <li class="light leftGap">Java (JDK11)</li>
                     <li class="light leftGap">오픈 소스 및 라이브러리</li>
