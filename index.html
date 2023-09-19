@@ -22,7 +22,6 @@
             background-color: white;
             width: 100%;
             height: 100%;
-            padding: 40% 0;
         }
 
         #second {
@@ -38,6 +37,7 @@
         #third {
             background-color: white;
             height: 100%;
+            padding-bottom: 100px;
         }
 
         #content {
@@ -258,11 +258,45 @@
             columns: 2;
         }
 
+        @media screen and (max-width: 1905px) {
+            #first {
+                padding: 20% 0 !important;
+            }
+        }
+
+        @media screen and (max-width: 1800px) {
+            #first {
+                padding: 23% 0 !important;
+            }
+        }
+
+        @media screen and (max-width: 1700px) {
+            #first {
+                padding: 28% 0 !important;
+            }
+        }
+
+        @media screen and (max-width: 1600px) {
+            #first {
+                padding: 35% 0 !important;
+            }
+        }
+
+        @media screen and (max-width: 1500px) {
+            #first {
+                padding: 37% 0 !important;
+            }
+        }
+
         @media screen and (max-width: 1400px) {
 
             html,
             body {
                 font-size: 0.95rem !important;
+            }
+
+            #first {
+                padding: 40% 0 !important;
             }
         }
 
@@ -273,13 +307,21 @@
                 font-size: 0.9rem !important;
             }
 
-            #bounce {
-                animation: none;
-                display: none;
+            #first {
+                padding: 44% 0 !important;
+            }
+        }
+
+
+        @media screen and (max-width: 1100px) {
+
+            html,
+            body {
+                font-size: 0.9rem !important;
             }
 
-            #bounce:hover {
-                display: none;
+            #first {
+                padding: 49% 0 !important;
             }
         }
 
@@ -290,13 +332,8 @@
                 font-size: 0.85rem !important;
             }
 
-            #bounce {
-                animation: none;
-                display: none;
-            }
-
-            #bounce:hover {
-                display: none;
+            #first {
+                padding: 54% 0 !important;
             }
         }
 
@@ -307,13 +344,8 @@
                 font-size: 0.8rem !important;
             }
 
-            #bounce {
-                animation: none;
-                display: none;
-            }
-
-            #bounce:hover {
-                display: none;
+            #first {
+                padding: 65% 0 !important;
             }
         }
 
@@ -715,9 +747,9 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script>
-        window.onscroll = function () {
-            console.log(window.scrollY);
-        };
+        // window.onscroll = function () {
+        //     console.log(window.scrollY);
+        // };
 
         if (window.innerWidth <= 768) {
             $("#line").css("background", "linear-gradient(to top, yellow 50%, transparent 50%)");
