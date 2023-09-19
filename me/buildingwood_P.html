@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servlet Project [BuildingWood]</title>
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <style>
+        @media screen and (max-width: 1700px) {
+
+            html,
+            body {
+                font-size: 1.1rem !important;
+            }
+
+            .detailskill>div>ul {
+                font-size: .8rem;
+            }
+        }
+
+        @media screen and (max-width: 1400px) {
+
+            html,
+            body {
+                font-size: 1rem !important;
+            }
+
+            .detailskill>div>ul {
+                font-size: .8rem;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+
+            html,
+            body {
+                font-size: .95rem !important;
+            }
+
+            .detailskill>div>ul {
+                font-size: .7rem;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            html,
+            body {
+                font-size: .9rem !important;
+            }
+
+            .detailskill>div>ul {
+                font-size: .5rem;
+            }
+        }
+
+        h5 {
+            margin-top: 2%;
+        }
+
+        html,
+        body {
+            margin: 3% 0;
+            padding: 0;
+            font-size: 1.2rem;
+            /* background-color: rgba(255, 235, 147, 0.781); */
+        }
+
+        .d-block {
+            width: 80%;
+            padding: 5px;
+            border: .3px solid #e0dfdf;
+        }
+
+        #content {
+            background-color: white;
+            height: 100%;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            margin: auto 0;
+        }
+
+        .mainPic {
+            width: 60%;
+            padding-bottom: 5%;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .Eimg>img {
+            width: 80%;
+            padding: 5px;
+            border: .3px solid #e0dfdf;
+        }
+
+        .Eimg>video {
+            width: 80%;
+            padding: 5px;
+            border: .3px solid #e0dfdf;
+        }
+
+        .Eimg {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .semi_title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 3%;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            margin: 250px;
+            background-color: chartreuse !important;
+        }
+
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
+
+        .d-md-block {
+            text-align: center;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .Eimg>.imgLink {
+            border: 0px;
+            width: 40%;
+            cursor: pointer;
+        }
+
+        .detailskill {
+            display: grid;
+            margin: 0 10%;
+            grid-gap: 3%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .detailskill>div>h5 {
+            font-weight: bold;
+            color: green;
+            border-bottom: .5px solid rgba(0, 128, 0, 0.493);
+            margin-bottom: 5%;
+            text-align: center;
+        }
+
+        .detailskill>div {
+            border: .8px solid rgba(0, 68, 0, 0.493);
+            border-radius: 10%;
+            padding: 5%;
+            padding-left: 8%;
+            text-align: left;
+        }
+
+        .detailskill>div>ul {
+            list-style: disc;
+            padding-left: 12%;
+        }
+
+        .detailskill>div>ul>li {
+            overflow: none;
+            padding-bottom: 7%;
+        }
+
+        .detailskill>div>ul:last-child {
+            margin-bottom: 0px;
+        }
+
+        .feel {
+            list-style: inside;
+            text-align: left;
+            padding-left: 5%;
+        }
+
+        .feel>li {
+            padding-bottom: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div id="title">
+            <img src="buildingwood_main2.PNG" class="mainPic">
+            <br>빌딩숲
+            <div class="project-title">
+                [Servlet Project] <br>
+                직장인들을 위한 다목적 커뮤니티 사이트
+            </div>
+        </div>
+        <div class="semi_title">1. 기획서</div>
+        <div class="Eimg">
+            <img src="bw2.png">
+            <h5>기획서</h5>
+            기획서를 작성하며 주제선정 및 분석을 통해 기존의 문제점 및 개선점을 알아보고 구현목표를
+            세웁니다.
+        </div>
+        <div class="semi_title">2. 요구분석서</div>
+        <div class="Eimg">
+            <img src="bw1.png">
+            <h5>요구분석서</h5>
+            요구분석서를 통해 기능적 요구사항을 상세하게 서술합니다.
+        </div>
+        <div class="semi_title">3. 화면설계(Figma)</div>
+        <div class="Eimg">
+            <img src="buildingwood2.png">
+            <h5>화면 설계(Figma)</h5>
+            Figma를 활용한 화면 설계를 진행하였습니다.
+        </div>
+        <div class="semi_title">4. 페이지 설계(Drowio)</div>
+        <div class="Eimg">
+            <img src="buildingwood3.png">
+            <h5>페이지 설계(Drowio)</h5>
+            Drowio를 활용하여 페이지 간의 이동과 기능을 시각적으로 표현하였고 패키지와
+            URL주소를 정하였습니다.
+        </div>
+        <div class="semi_title">5. ERD</div>
+        <div class="Eimg">
+            <div id="F3" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="buildingwood4.png" class="d-block w-100"
+                            style="width: 80% !important; margin: 0 auto;">
+                        <div class="d-md-block">
+                            <h5>ERD</h5>
+                            <p>기능적 요구사항을 충족시키기위한 빌딩숲의 DBMS입니다.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (21).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (22).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (23).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (24).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (25).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (26).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (27).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (28).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#F3" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#F3" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="semi_title">6. 개발배경</div>
+        <div class="Eimg">
+            <div id="F9" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (4).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (5).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (6).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (7).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (8).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (9).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (10).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (12).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#F9" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#F9" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="semi_title">7. 개발도구</div>
+        <div class="Eimg">
+            <img src="bw_ppt/s (14).JPG">
+        </div>
+        <div class="semi_title">8. 개발언어</div>
+        <div class="Eimg">
+            <img src="bw_ppt/s (16).JPG">
+        </div>
+        <div class="semi_title">9. 기능설명</div>
+        <div class="Eimg">
+            <div class="detailskill">
+                <div>
+                    <h5>회원기능</h5>
+                    <ul>
+                        <li>네이버/구글 로그인</li>
+                        <li>아이디 기억하기</li>
+                        <li>회원가입, 비밀번호 찾기</li>
+                        <li>이용자 정보 확인 및 수정</li>
+                        <li>나의 스케쥴 관리 공지 및 건의사항 확인</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>관리자</h5>
+                    <ul>
+                        <li>건물정보 관리</li>
+                        <li>공지/건의 게시판 관리</li>
+                        <li>이용자 차단</li>
+                        <li>사이트 통계</li>
+                        <li>공지 및 건의사항 관리</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>카풀</h5>
+                    <ul>
+                        <li>게시판 CRUD</li>
+                        <li>카풀 신청</li>
+                        <li>신청 내역 확인 및 수락/거절</li>
+                        <li>운전자 등록</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>SNS</h5>
+                    <ul>
+                        <li>게시판 CRUD</li>
+                        <li>댓글 CRUD</li>
+                        <li>좋아요 CRUD</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>맛집추천</h5>
+                    <ul>
+                        <li>제목과 한줄평 검색 기능</li>
+                        <li>지도를 활용하여 맛집 위치 표시</li>
+                        <li>맛집 이미지 슬라이드 기능</li>
+                        <li>평점 등록 및 댓글 CRUD</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>스터디/과외</h5>
+                    <ul>
+                        <li>게시글 CRUD</li>
+                        <li>평가 CRUD</li>
+                        <li>페이징/검색</li>
+                        <li>지역,건물,금액별,등록순 정렬기능</li>
+                        <li>지도로 위치 표시</li>
+                        <li>해쉬태그 기능</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>동호회/약속</h5>
+                    <ul>
+                        <li>게시글 CRUD</li>
+                        <li>댓글 CRUD</li>
+                        <li>페이징/검색</li>
+                        <li>지역,건물별 정렬기능</li>
+                        <li>해쉬태그 검색 기능</li>
+                        <li>신청/수락/모집종료 기능</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>건의/공지사항</h5>
+                    <ul>
+                        <li>게시글 CRUD</li>
+                        <li>제목,내용,닉네임 검색</li>
+                        <li>유저: 건의 및 질문 카테고리 사용가능</li>
+                        <li>관리자: 공지 카테고리 사용가능</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="semi_title">10. 기능구현</div>
+        <div class="Eimg">
+            <div id="F10" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (31).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (32).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (33).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (34).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (35).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (36).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (37).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (38).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (39).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (40).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (41).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style=" text-align: center !important;">
+                            <img src="bw_ppt/s (42).JPG" class="d-block w-100"
+                                style="width: 80% !important; margin: 0 auto;">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#F10" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#F10" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="semi_title">11. 느낀 점</div>
+        <div class="Eimg">
+            <ul class="feel">
+                <li>학원에서 진행하는 첫 웹사이트 프로젝트로 할 수 있을까라는 부담감이 심했습니다. 그래서 자습용으로 간단한 웹사이트를 만들었고 이를 통해 자신감을 가지게 되었습니다.</li>
+                <li>프로젝트 진행 중 코로나 확진으로 신체적으로 많이 고되었지만 책임감을 가지고 성공적으로 끝마쳐 너무 뿌듯했습니다.</li>
+                <li>처음에는 API 사용하는 것에 익숙지 않아 힘들었지만 후반부가 될수록 사용하는 데에 수월함을 느끼게 되었습니다.</li>
+                <li>프로젝트를 진행하며 Cookie와 Section의 생명 주기, 보안에 대해 좀 더 이해하게 되었습니다.</li>
+                <li>처음으로 만든 웹사이트 프로젝트로 너무 재미있었고 개발자의 발전은 무궁무진하다는 것과 더욱 발전에 증진해야겠다고 느꼈습니다.</li>
+            </ul>
+        </div>
+        <div class="semi_title">12. GitHub</div>
+        <div class="Eimg">
+            <img src="bwgithub.png" class="imgLink"
+                onclick="window.open('https://github.com/KimSuminKim/BuildingWood.git','빌딩숲(김수민)','width=900px')">
+        </div>
+    </div>
+    <script src="/jquery/js/jquery-3.6.4.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

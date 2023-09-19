@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBMS Oracle Project</title>
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <style>
+        @media screen and (max-width: 700px) {
+
+            html,
+            body {
+                font-size: .95rem !important;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            html,
+            body {
+                font-size: .9rem !important;
+            }
+        }
+
+        h5 {
+            margin-top: 2%;
+        }
+
+        html,
+        body {
+            margin: 3% 0;
+            padding: 0;
+            font-size: 1.2srem;
+            /* background-color: rgba(255, 235, 147, 0.781); */
+        }
+
+
+        #content {
+            background-color: white;
+            height: 100%;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #project {
+            padding-left: 21.5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 10% auto;
+            grid-gap: 80px;
+
+        }
+
+        #title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            margin: auto 0;
+        }
+
+        .mainPic {
+            width: 60%;
+            padding-bottom: 5%;
+        }
+
+        .pic {
+            width: 200px;
+        }
+
+        .project-image {
+            width: 100%;
+        }
+
+        ul {
+            list-style: inside;
+            text-align: left;
+            padding-left: 5%;
+        }
+
+        ul>li {
+            padding-bottom: 1%;
+        }
+
+        .light {
+            font-weight: normal;
+            list-style-position: inside;
+            text-indent: 8px;
+        }
+
+        .Eimg>img {
+            width: 80%;
+            padding: 5px;
+            border: .3px solid #e0dfdf;
+        }
+
+        .Eimg {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .semi_title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 3%;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            margin: 250px;
+            background-color: chartreuse !important;
+        }
+
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
+
+        #F1 {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .d-md-block {
+            text-align: center;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div id="title">
+            <img src="sql_main.png" class="mainPic">
+            <br>교육센터 운영 프로그램
+            <div class="project-title">
+                [DBMS Oracle Project] <br>
+                주어진 요구사항을 충족시키는 구현 프로젝트
+            </div>
+        </div>
+        <div class="semi_title">1. 요구분석서</div>
+        <div class="Eimg">
+            <img src="sql1.png">
+            <h5>요구분석서</h5>
+            요구분석서를 통해 기능적 요구사항을 상세하게 서술합니다.
+        </div>
+        <div class="semi_title">2. ERD</div>
+        <div class="Eimg">
+            <img src="ERD.png">
+            <h5>ERD</h5>
+            <div>주어진 요구사항을 충족하기 위한 ERD입니다.</div>
+        </div>
+        <div class="semi_title">3. 주요 기능</div>
+        <div id="F4" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#F4" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#F4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#F4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#F4" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#F4" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="procCheTime.png" class="d-block w-100" style="width: 80% !important; margin: 0 auto;">
+                    <div class="d-md-block">
+                        <h5>출결 상황 기록 Procedure</h5>
+                        <p>접근 번호에 따라 교육생, 관리자로 구별하고 접근 시간에 따라 출결현황을 출결 기록 테이블에
+                            갱신합니다.
+                            <br>또한 관리자가 특정 시간에 접근하면 출근 혹은 퇴근 입력이 되지 않은 교육생들의
+                            출결 테이블에 결석으로
+                            일괄 update를 진행하고 해당 기록 테이블을 전체 초기화를 진행합니다.
+                            <br>또한 중도탈락자를 가려내는 procedure를 호출합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="procDropOut.png" class="d-block w-100" style="width: 80% !important; margin: 0 auto;">
+                    <div class="d-md-block">
+                        <h5>중도 탈락자 구별 Procedure</h5>
+                        <p>출결 테이블에 있는 출석 이외의 상황의 개수와 각각의 점수를 계산하여 일정 점수 이상이
+                            되면 해당 학생의 레코드를 찾아
+                            중도탈락 여부의 필드에 중도탈락을 갱신합니다.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="trgTime.png" class="d-block w-100" style="width: 80% !important; margin: 0 auto;">
+                    <div class="d-md-block">
+                        <h5>출결 상황 기록 Trigger</h5>
+                        <p>출결 기록 테이블에 insert나 update문이 실행되면 출근, 지각, 조퇴 등의
+                            출결 상태를 구별하여 출결 테이블에
+                            insert를 진행하고 출결 상태에 따른 알림을 줍니다.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="trgClassEndCome.png" class="d-block w-100" style="width: 80% !important; margin: 0 auto;">
+                    <div class="d-md-block">
+                        <h5>출결 시 중도 탈락자, 수료과정 구별 Trigger</h5>
+                        <p>출결 테이블에 insert가 실행되기 전에 해당 교육생의 레코드에 접근하여 중도탈락 여부,
+                            수료과정의 기간을 탐색하여 중도탈락자와
+                            수료과정이 끝났거나 아직 시작하지 않은 교육생은 에러를 발생, 메시지를 출력하여 출결
+                            테이블에서의 입력을 거부합니다.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="procStuInfo.png" class="d-block w-100" style="width: 80% !important; margin: 0 auto;">
+                    <div class="d-md-block">
+                        <h5>학생 정보 조회 Procedure</h5>
+                        <p>조회하고 싶은 학생의 이름을 입력받아 해당 학생의 레코드 정보를 가공하여 출력합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#F4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#F4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="semi_title">4. 느낀 점</div>
+        <div class="Eimg">
+            <ul>
+                <li>이번 프로젝트 진행하면서 RDBMS에 대한 이해와 자신감이 생기게 되었습니다.</li>
+                <li>하나의 Procedure에 여러 개의 Trigger와 Procedure을 작동하도록 만들어
+                    차곡차곡 설정한 PL/SQL들이 발생하는 것을 보며 재미와 뿌듯함을 느꼈습니다.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="/jquery/js/jquery-3.6.4.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

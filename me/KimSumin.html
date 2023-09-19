@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김수민</title>
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        @media screen and (max-width: 1400px) {
+
+            html,
+            body {
+                font-size: .95rem !important;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+
+            html,
+            body {
+                font-size: .9rem !important;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+
+            html,
+            body {
+                font-size: .85rem !important;
+            }
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 88%;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+
+        #first {
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            padding: 400px 0;
+        }
+
+        #second {
+            background-color: #f4eeff;
+            background: linear-gradient(to top, #f4eeff 90%, white);
+            padding: 200px 0;
+            display: grid;
+            grid-template-columns: 40% 25% 35%;
+            grid-template-rows: .5fr .5fr;
+            grid-gap: 8px;
+        }
+
+        #third {
+            background-color: white;
+            height: 100%;
+        }
+
+        #content {
+            margin-left: 45px;
+            font-size: 2rem;
+        }
+
+        #bounce {
+            padding: 2px;
+            border: 0.5px solid;
+            font-size: 1rem;
+            width: 110px;
+            text-align: center;
+            margin-top: 10px;
+            animation: motion 0.5s linear 0s infinite alternate;
+        }
+
+        @keyframes motion {
+            0% {
+                margin-top: 10px;
+            }
+
+            100% {
+                margin-top: 15px;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                background-color: white;
+            }
+
+            to {
+                background-color: lavender;
+            }
+        }
+
+        #bounce:hover {
+            background-color: lavender;
+            color: black;
+            font-weight: bold;
+            padding: 2px;
+            animation: none;
+        }
+
+        #rectangle {
+            width: 0;
+            height: 0;
+            border-bottom: 100px solid transparent;
+            border-top: 100px solid skyblue;
+            border-left: 1000px solid skyblue;
+            border-right: 100px solid transparent;
+        }
+
+        #me {
+            grid-row: span 2;
+            margin: 10% 45px;
+            width: 80%;
+            border-radius: 10%;
+            float: left;
+        }
+
+        #me::after {
+            clear: left;
+            content: " ";
+        }
+
+        #kor {
+            font-size: 4rem;
+        }
+
+        #name {
+            margin: auto 0;
+            padding: 50px 0;
+            grid-column: span 2;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+
+        #one {
+            line-height: 1.8rem;
+        }
+
+        .gap {
+            display: inline;
+            margin-left: 10px;
+            font-weight: normal;
+        }
+
+        .gap>span {
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li:first-child {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+
+        ul>li {
+            font-weight: bold;
+        }
+
+        #skill {
+            float: left;
+            margin: 0 10%;
+        }
+
+        #skill::after {
+            clear: left;
+        }
+
+        #skill>span {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        #skill>div>img {
+            width: 22%;
+        }
+
+        .small {
+            width: 45% !important;
+        }
+
+        .big {
+            width: 16% !important;
+        }
+
+        #project {
+            padding-left: 45px;
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr 0.7fr;
+            grid-template-rows: .2fr 1.2fr;
+            grid-gap: 40px;
+        }
+
+        #title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin: auto 0;
+            padding: 50px 0;
+        }
+
+        .project-detail {
+            grid-row: span 2;
+        }
+
+        .project-detail:nth-child(2n) {
+            padding-right: 30px;
+        }
+
+        .project-title {
+            grid-column: span 3;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: auto 0;
+        }
+
+        .project-image {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .long>ul>li {
+            padding-bottom: 2.5%;
+        }
+
+        .light {
+            font-weight: normal;
+            list-style-position: inside;
+            text-indent: 8px;
+        }
+
+        .modal-header {
+            background-color: lavender !important;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #FC4F00 !important;
+        }
+
+        .d-md-block {
+            text-align: center;
+            padding-bottom: 100px;
+        }
+
+        #move {
+            color: black !important;
+        }
+
+        .carousel-inner>.carousel-item>.d-md-block>p,
+        .carousel-inner>.carousel-item>.d-md-block>h5 {
+            padding-top: 10px;
+        }
+
+        #dog {
+            margin: 0 auto;
+            border-radius: 100%;
+            width: 40%;
+        }
+
+        #notion {
+            width: 5rem;
+            cursor: pointer;
+        }
+
+        #twoList {
+            columns: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first">
+        <div id="content">
+            안녕하세요.<br />
+            발전하는 <span id="line">개발자 김수민</span>입니다.
+            <br />
+            <div id="bounce">click to move</div>
+        </div>
+    </div>
+    <div id="second">
+        <img src="me2.jpg" id="me">
+        <div id="name"><span id="kor">김수민</span><br>KIM SUMIN</div>
+        <div id="one">1997.08.19 Seoul<br>+82
+            010-4125-9935
+            <br>
+            kimtnals819@gmail.com<br>공부 :<img src="notion_nomemtion.png" id="notion"
+                onclick="window.open('https://www.notion.so/3fea7c407e6a479c8c239550e65b94ad?v=85d9a41b57f64d72b8640a2d7132f168&pvs=4','공부기록','width=900px')">
+            <ul>
+                <li>EXPERIENCE</li>
+                <li>
+                    2016.03<div class="gap">대진대학교
+                        입학<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[식품영양학과
+                        전공]</div>
+                </li>
+                <li>
+                    2020.05<div class="gap">진원의료재단 근무</div>
+                </li>
+                <li>
+                    2021.11<div class="gap">재현고등학교 근무</div>
+                </li>
+                <li>
+                    2023.02<div class="gap">쌍용 Java 개발자 과정 수료</div>
+                </li>
+            </ul>
+        </div>
+        <div id="skill"><span>SKILLS</span>
+            <div>
+                <img src="java.png" alt="">
+                <img src="Oracle.png" class="small">
+                <img src="html.png" alt="">
+                <img src="css.png" alt="">
+                <img src="js.png" class="big">
+                <img src="jQuery.png" class="small">
+                <img src="bootstrap.png" class="small">
+                <img src="git.png" alt="">
+                <img src="spring.png" class="small">
+                <img src="spring-boot.png" class="small">
+                <img src="size/mybatis.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- <div id="rectangle"></div> -->
+
+    <div id="third">
+        <div id="title">PROJECTS</div>
+        <div id="project">
+            <div class="project-title">1. 샐러드 판매 사이트</div>
+            <div>
+                <img src="dndn_logo.png" class="project-image"
+                    onclick="window.open('./dndn_P.html','든든','width=900px')">
+            </div>
+            <div class="project-detail">
+                <ul>
+                    <li>개발 주요 사항</li>
+                    <li>MyBatis기반의 웹 페이징 기술</li>
+                    <li>Spring Security을 활용한 보안 기술</li>
+                    <li>Kakao chat api와 daum 주소 api, Iamport api, summernote를 활용한 웹 페이징</li>
+                </ul>
+                <ul>
+                    <li>살펴보기</li>
+                    <li>포스트 코로나와 1인 가구, 물가 증가로 건강식에 대한 수요와 정기배송의 관심도가 높아져 이를 충족시키기 위한 정기배송형 도시락 판매 사이트를 구현하는 것을 목적으로 한다.
+                    </li>
+                </ul>
+                <ul>
+                    <li>개발 관련 설명</li>
+                    <li>Spring Security을 활용해 보안 인증과 더불어 Kakao login api를 이용해 사용자 인증과 인가 로그인을 구현하였습니다. 또한
+                        Iamport api를 통해 비인증 결재,정기 자동결재 등의 REST API를 구현하였습니다.</li>
+                </ul>
+            </div>
+            <div class="project-detail">
+                <ul>
+                    <li>기술 스택</li>
+                </ul>
+                <ul id="twoList">
+                    <li style="
+                font-size: 1rem;
+                line-height: normal;">개발 환경</li>
+                    <li class="light">Java (JDK11)</li>
+                    <li class="light">Oracle SQL</li>
+                    <li class="light">HTML</li>
+                    <li class="light">CSS</li>
+                    <li class="light">JavaScript(jQuery)</li>
+                    <li class="light">JSP</li>
+                    <li class="light">Spring 3.0(STS)</li>
+                    <li class="light">JSTL</li>
+                    <li class="light">REST-API</li>
+                    <li class="light">MyBatis</li>
+                    <li style="line-height: 12rem;">&nbsp;</li>
+                    <li>오픈 소스 및 라이브러리</li>
+                    <li class="light">JDBC</li>
+                    <li class="light">Ajax</li>
+                    <li class="light">Spring Framework</li>
+                    <li class="light">Bootstrap</li>
+                    <li class="light">Kakao login api</li>
+                    <li class="light">Kakao 채팅 api</li>
+                    <li class="light">Kakao map api</li>
+                    <li class="light">javax.mail api</li>
+                    <li class="light">Jquery validation</li>
+                    <li class="light">Daum 주소 api</li>
+                    <li class="light">Iamport api</li>
+                    <li class="light">sweetalert2</li>
+                    <li class="light">Google chart</li>
+                    <li class="light">Flatpickr.js</li>
+                    <li class="light">Full calendar api</li>
+                    <li class="light">AWS</li>
+                </ul>
+            </div>
+
+            <div class="project-title">2. 직장인을 위한 다목적 커뮤니티 사이트</div>
+            <div>
+                <img src="buildingwood_main2.png" class="project-image"
+                    onclick="window.open('./buildingwood_P.html','빌딩숲','width=900px')">
+            </div>
+            <div class="project-detail">
+                <ul>
+                    <li>개발 주요 사항</li>
+                    <li>JSP기반의 웹 페이징 기술</li>
+                    <li>bootstrap을 활용한 css</li>
+                    <li>Naver,Google login api와 javax maill api, Kakao api를 활용한 웹페이징</li>
+                </ul>
+                <ul>
+                    <li>살펴보기</li>
+                    <li> 같은 빌딩 내의 직장인들 간의 소통, 협력, 사회적 연결을 촉진하고
+                        효율적인 정보와 서비스를 제공하는 커뮤니티 환경을 조성하는 것을 목적으로 한다.
+                    </li>
+                </ul>
+                <ul>
+                    <li>개발 관련 설명</li>
+                    <li>Google oauth2를 통해 API 연동인증, Naver login api를 이용한 로그인을 구현하였습니다. 또한
+                        javax.mail.api를 통해 메일로 인증을 진행하였고
+                        Kakao map api와 Kakao 주소 api를 통해 빌딩숲의 기본 틀을 구현하였습니다.</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>기술 스택</li>
+                    <li>개발 환경</li>
+                    <li class="light">Java (JDK11)</li>
+                    <li class="light">Oracle SQL</li>
+                    <li class="light">HTML</li>
+                    <li class="light">CSS</li>
+                    <li class="light">JavaScript(jQuery)</li>
+                    <li class="light">JSP</li>
+                </ul>
+                <ul>
+                    <li></li>
+                    <li>오픈 소스 및 라이브러리</li>
+                    <li class="light">JDBC</li>
+                    <li class="light">Bootstrap</li>
+                    <li class="light">Google oauth2</li>
+                    <li class="light">Naver login api</li>
+                    <li class="light">javax.mail.api</li>
+                    <li class="light">Jquery validation</li>
+                    <li class="light">Kakao map api</li>
+                    <li class="light">Kakao 주소 api</li>
+                    <li class="light">sweetalert2</li>
+                    <li class="light">Google chart</li>
+                    <li class="light">Full calendar api</li>
+                </ul>
+            </div>
+            <div class="project-title">3. 교육센터 운영 프로그램</div>
+            <div>
+                <img src="sql_main.png" class="project-image" onclick="window.open('./sql_P.html','SQL','width=900px')">
+            </div>
+            <div class="project-detail">
+                <ul>
+                    <li>개발 주요 사항</li>
+                    <li>SQL 기반의 데이터베이스 프로젝트</li>
+                    <li>ANSI-SQL, PL/SQL을 이용한 데이터 처리</li>
+                </ul>
+                <ul>
+                    <li>살펴보기</li>
+                    <li>교육센터에서의 업무를 효율적으로 처리,관리할 수 있게 하여 운영에 편리함을 증대시킨다</li>
+                </ul>
+                <ul>
+                    <li>기술 스택</li>
+                    <li>개발 환경</li>
+                    <li class="light">Java (JDK11)</li>
+                    <li class="light">Oracle SQL</li>
+                    <li class="light">eXERD</li>
+                </ul>
+            </div>
+            <div class="project-detail long">
+                <ul>
+                    <li>개발 관련 설명</li>
+                    <li>관리자가 기초 정보를 기반으로 과목과 과정을 개설하고 과목에 맞는 교사를 배정하며 교육생들의 출결과 성적을 관리할 수 있는 기능을
+                        구현했습니다.</li>
+                    <li>교사가 과목별 시험과 교육생의 시험 성적, 과제 등을 관리하고 자신의 강의
+                        스케줄을 조회할 수 있는 기능을 구현했습니다.</li>
+                    <li>교육생이 자신의 출결, 성적, 과제 등을 조회하고 상담일지와 교사평가를
+                        관리하고 조회할 수 있는 기능을 구현했습니다.</li>
+                </ul>
+            </div>
+
+            <div class="project-title">4. 가상 주식 매매 프로그램</div>
+            <div>
+                <img src="console_main.jpg" class="project-image"
+                    onclick="window.open('./console_P.html','Console','width=900px')">
+            </div>
+            <div class="project-detail">
+                <ul>
+                    <li>개발 주요 사항</li>
+                    <li>java 콘솔 기반의 출력 프로젝트</li>
+                    <li>Jsoup을 이용한 크롤링</li>
+                    <li>파일 입출력 기반의 데이터 처리</li>
+                </ul>
+                <ul>
+                    <li>살펴보기</li>
+                    <li>원금 손실 없이 주식투자의 전과정을 경험함으로써 건전한 투자문화의 조성과 재테크 교육을 장려한다.</li>
+                </ul>
+            </div>
+            <div class="project-detail">
+                <ul>
+                    <li>기술 스택</li>
+                    <li>개발 환경</li>
+                    <li>Java (JDK11)</li>
+                    <li>오픈 소스 및 라이브러리</li>
+                    <li>Jsoup</li>
+                </ul>
+                <ul>
+                    <li>개발 관련 설명</li>
+                    <li>Jsoup을 이용한 크롤링을 통해 데이터를 읽고 저장,관리하는 파일 입출력을 구현했습니다.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="/jquery/js/jquery-3.6.4.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+        // window.onscroll = function () {
+        //     console.log(window.scrollY);
+        // };
+
+        $('#bounce').click(() => {
+
+            window.scrollTo(0, 1052);
+
+            $('#line').css('background', 'linear-gradient(to top, yellow 50%, transparent 50%)');
+
+            $('#bounce').css('animation', 'none');
+
+        });
+        $(document).scroll(function () {
+
+            if ($(document).scrollTop() > 200) {
+
+                $('#line').css('background', 'linear-gradient(to top, yellow 50%, transparent 50%)');
+                $('#bounce').css('animation', 'none');
+
+            }
+            if ($(document).scrollTop() > 1000) {
+                $('#second').css('background', 'linear-gradient(to bottom, #f4eeff 90%, white)');
+            } else if ($(document).scrollTop() < 2059) {
+                $('#second').css('background', '#f4eeff');
+            }
+
+        });
+    </script>
+</body>
+
+</html>

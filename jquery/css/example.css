@@ -1,0 +1,106 @@
+body,
+p,
+div,
+span,
+ul,
+ol,
+li,
+input,
+textarea,
+option,
+b,
+i,
+table,
+td,
+th,
+tr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* color: #555; */
+  font-family: "맑은 고딕";
+}
+
+.table {
+  border: 1px solid #999;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  border: 1px solid #999;
+}
+
+.table.wide {
+  width: 100%;
+}
+.table.wide th,
+.table.wide td {
+  padding: 5px 10px;
+}
+
+.table.narrow th,
+.table.narrow td {
+  padding: 3px 5px;
+}
+
+.table.srtiped tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.btn {
+  border: 1px solid #999;
+  background-color: lavender;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.btn.primary {
+  background-color: thistle;
+}
+.btn.small {
+  padding: 5px 8px;
+}
+.btn.large {
+  padding: 10px 20px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.box.small {
+  width: 100px;
+  height: 100px;
+}
+.box.large {
+  width: 300px;
+  height: 300px;
+}
+.box.bg-red {
+  background-color: tomato;
+}
+.box.bg-yellow {
+  background-color: yellow;
+}
+.box.bg-blue {
+  background-color: skyblue;
+}
+.box.bg-green {
+  background-color: yellowgreen;
+}
+.box.bg-purple {
+  background-color: slateblue;
+}
+
+.box.fg-white {
+  color: #fff;
+}
+
+.box.inline {
+  display: inline;
+}
