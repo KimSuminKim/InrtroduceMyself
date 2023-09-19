@@ -20,8 +20,8 @@
         }
 
         .d-block {
-            width: 80%;
             padding: 5px;
+            width: 80% !important;
             border: .3px solid #e0dfdf;
         }
 
@@ -76,7 +76,6 @@
 
         .carousel-indicators [data-bs-target] {
             margin: 250px;
-            background-color: chartreuse !important;
         }
 
         .carousel-control-prev-icon {
@@ -181,29 +180,11 @@
             }
         }
 
-        @media screen and (max-width: 900px) {
-
-            html,
-            body {
-                font-size: 0.8rem !important;
-            }
-
-        }
-
-        @media screen and (max-width: 800px) {
-
-            html,
-            body {
-                font-size: 0.7rem !important;
-            }
-
-        }
-
         @media screen and (max-width: 768px) {
 
             html,
             body {
-                font-size: 0.9rem !important;
+                font-size: .9rem !important;
             }
 
             .detailskill {
@@ -211,12 +192,19 @@
                 grid-template-rows: 1fr 1fr 1fr 1fr;
             }
 
-            .Eimg>div {
+            .Eimg>div,
+            .d-md-block>div {
                 margin: 2% 15%;
             }
 
-            .d-md-block>div {
-                margin: 2% 15%;
+            .carousel-control-next,
+            .carousel-control-prev {
+                width: 10%;
+            }
+
+            .d-block {
+                width: 100% !important;
+                padding: 1px;
             }
         }
     </style>
@@ -259,58 +247,49 @@
             <div id="F3" class="carousel slide" data-bs-ride="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="buildingwood4.png" class="d-block w-100"
-                            style="width: 80% !important; margin: 0 auto;">
+                        <img src="buildingwood4.png" class="d-block w-100" style="margin: 0 auto;">
                         <div class="d-md-block">
                             <div>기능적 요구사항을 충족시키기위한 빌딩숲의 DBMS입니다.</div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (21).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (21).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (22).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (22).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (23).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (23).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (24).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (24).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (25).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (25).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (26).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (26).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (27).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (27).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (28).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (28).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                 </div>
@@ -332,50 +311,42 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (4).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (4).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (5).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (5).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (6).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (6).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (7).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (7).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (8).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (8).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (9).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (9).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (10).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (10).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (12).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (12).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                 </div>
@@ -487,74 +458,62 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (31).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (31).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (32).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (32).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (33).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (33).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (34).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (34).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (35).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (35).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (36).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (36).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (37).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (37).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (38).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (38).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (39).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (39).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (40).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (40).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (41).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (41).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div style=" text-align: center !important;">
-                            <img src="bw_ppt/s (42).JPG" class="d-block w-100"
-                                style="width: 80% !important; margin: 0 auto;">
+                            <img src="bw_ppt/s (42).JPG" class="d-block w-100" style="margin: 0 auto;">
                         </div>
                     </div>
                 </div>
